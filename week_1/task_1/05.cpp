@@ -12,6 +12,7 @@ int main(int argc, char **argv) {
     int tag_ext = 1, tag_int = 2;
     gmsh::model::occ::addTorus(R, 0, 0, R, ext_r, tag_ext);
     gmsh::model::occ::addTorus(R, 0, 0, R, int_r, tag_int);
+    const double thickness = ext_r - int_r;
     
     std::vector<std::pair<int, int>> out;
     std::vector<std::vector<std::pair<int, int>>> outmap;
